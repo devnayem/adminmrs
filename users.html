@@ -23,30 +23,37 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">My Admin</a>
+          <a class="navbar-brand" href="#">Admin Panel</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.html">Dashboard</a></li>
-            <li><a href="pages.html">Pages</a></li>
-            <li class="active"><a href="users.html">Users</a></li>
-          </ul>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Welcome, Admin!</a></li>
-            <li><a href="login.html">Logout</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
+              <!-- List of Navigation Bar (LEFT SIDE) -->
+              <li><a href="index.html">Dashboard</a></li>
+              <li class="active"><a href="users.html">Users</a></li>
+              <li><a href="reports.html">Reports</a></li>
+              <li><a href="push.html">Push Notifications</a></li>
+            </ul>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <!-- List of Navigation Bar (RIGHT SIDE) -->
+              <li><a href="#">Welcome, Admin!</a></li>
+              <li><a href="messages.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+              <li><a href="alert.html"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span></a></li>
+              <li><a href="settings.html"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
+              <li><a href="login.html"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
+            </ul>
+        </div>
       </div>
 		</nav>
-		
+    
+<!-- START: USERS PAGE -->
 <!-- This is the header -->
 <header id="header">
 	<div class="container">
 		<div class="row">
 			<!-- /first row -->
 			<div class="col-md-10">
-				<h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Users <small> Manage Your Users</small></h1>
+				<h1><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <small> Manage Your Users</small></h1>
 			</div> 
 			<!-- /second row -->
 			<div class="col-md-2">
@@ -65,11 +72,10 @@
 	</div>
 </header>
 
-<!-- This is the second header -->
+<!-- This is the breadcrumb -->
 <section id="breadcrumb">
 	<div class="container">
 		<ol class="breadcrumb">
-      <!-- Add dashboard -->
       <li><a href="index.html"></a>Dashboard</li>
 			<li class="active">Users</li>
 		</ol>
@@ -82,11 +88,12 @@
 		<div class="row">
 			<!-- /first row -->
 			<div class="col-md-3">
-				<div class="list-group">
-					<a href="index.html" class="list-group-item active main-color-bg"><span class="glyphicon glyphicon-cog" aria-hidden="true"> Dashboard </span><span class="badge">14</span></a>
-					<a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"> Pages </span><span class="badge">14</span></a>
-					<a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"> Users </span><span class="badge">14</span></a>
-				</div>
+        <div class="list-group">
+          <a href="index.html" class="list-group-item"><span class="glyphicon glyphicon-cog" aria-hidden="true"> Dashboard</span><span class="badge">37</span></a>
+          <a href="users.html" class="list-group-item active main-color-bg"><span class="glyphicon glyphicon-user" aria-hidden="true"> Users</span><span class="badge">6</span></a>
+          <a href="reports.html" class="list-group-item"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"> Reports</span><span class="badge">29</span></a>
+          <a href="push.html" class="list-group-item"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"> Push Notifications</span><span class="badge">2</span></a>
+        </div>
 				<div class="well">
 					<h4>Disk Space Used</h4>
 					<div class="progress">
@@ -104,6 +111,7 @@
             <h3 class="panel-title">Users</h3>
           </div>
           <div class="panel-body">
+            <!-- starting point of panel-->
             <div class="row">
               <div class="col-md-12">
                 <input class="form-control" type="text" placeholder="Filter Users...">
@@ -146,7 +154,6 @@
                 <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
               </tr>
             </table>
-            
           </div>
         </div>
 			</div>
@@ -159,7 +166,6 @@
   </footer>
   
   <!-- Modal -->
-
   <!-- Add Pages -->
   <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
