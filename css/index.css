@@ -1,18 +1,32 @@
+
+
+/* for all */
 body {
-  background: #f4f4f4;
+  background: #ffffff;
+  font-family: 'Poppins', sans-serif;
 }
+.btn-original {
+  color: #411510;
+  background-color: #e7e1e1;
+  border-color: #b6b0b0;
+} 
+.btn-original:hover {
+  color: #140200;
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+} 
+
+/* for navbar */
 .navbar {
-  min-height: 33px !important;
+  min-height: 35px !important;
   margin-bottom: 0;
   border-radius: 0;
 }
 .navbar-nav > li > a, .navbar-brand {
   padding-top: 6px !important;
   padding-bottom: 0 !important;
-  height: 33px;
+  height: 35px;
 }
-
-/* NAVBAR */
 .navbar-default {
   background-color: #e74c3c;
   border-color: #c0392b;
@@ -66,15 +80,8 @@ body {
 .navbar-default .navbar-link:hover {
   color: #ffbbbc;
 }
-  
-/* CUSTOM */
-.main-color-bg {
-  background-color: #e74c3c !important;
-  border-color: #c0392b !important;
-  color: #ffffff !important;
-}
 
-/* HEADER */
+/* for header*/
 #header {
   background: #333333;
   color: #ffffff;
@@ -82,11 +89,7 @@ body {
   margin-bottom: 15px;
 }
 
-#header .create {
-  padding-top: 20px;
-}
-
-/* BREADCRUMB */
+/* for breadcrumb */
 .breadcrumb {
   background: #cccccc;
   color: #333333;
@@ -95,26 +98,14 @@ body {
   color: #333333;
 }
 
-/* PROGRESS BAR */
-.progress-bar {
-  background: #333333;
-  color: #ffffff;
+/* for section */
+#main .list-group a:hover,
+#main .list-group a:focus{
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+  border-right: 6px solid #c0392b;
 }
-.dash-box {
-  text-align: center;
-
-}
-
-/* FOOTER */
-#footer {
-  background: #333333;
-  color: #ffffff;
-  text-align: center;
-  padding: 30px;
-  margin-top: 30px; 
-}
-
-/* TABLE */
+/* for table */
 .btn-danger {
   background: #c0392b;
   color: #ffffff;
@@ -124,8 +115,18 @@ body {
   color: #c0392b;
 }
 
-/**/
+/* for footer */
+#footer {
+  background: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px; 
+}
 
+
+
+/**/
 #login {
   margin-top: 30px;
 }
@@ -146,3 +147,36 @@ body {
       background-color: #c0392b;
     }
   }
+
+/* OTHERS*/
+
+/* for active */
+.main-color-bg {
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+}
+/* for center align */
+.dash-box {
+  text-align: center;
+}
+
+/* Login Page*/
+
+.container-one-login {
+  margin-top: 150px;
+  width: 500px;
+  height: 250px;
+}
+.container-one-login img{
+  width: 50px;
+  height: 50px;
+}
+.container-one-login h3{
+  color: #411510;
+}
+.container-one-login .input-group {
+  margin-bottom: 10px;
+}
+
+
+  
