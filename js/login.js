@@ -12,24 +12,20 @@
   };
   firebase.initializeApp(config);
 
-
+  //variables
   const txtEmail = document.getElementById('txtEmail');
   const txtPass = document.getElementById('txtPassword');
   const btnLogin = document.getElementById('btnLogin');
-  const btnSignup = document.getElementById('btnSignup');
-  const btnLogout = document.getElementById('btnLogout');
 
+
+  // to login
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      // User is signed in.
-      alert("Logged in");
-
+      window.location = "index.html";
     } else {
-      // No user is signed in.
-
+      console.log("Not Logged In");
     }
   });
-
 
   btnLogin.addEventListener('click', e => {
     const email = txtEmail.value;
@@ -38,29 +34,10 @@
 
     const promise = auth.signInWithEmailAndPassword(email,pass);
     promise.catch(e => console.log(e.messsage)); 
-    
   });
 
-  btnSignup.addEventListener('click', e => {
-    const email = txtEmail.value;
-    const pass = txtPass.value;
-    const auth = firebase.auth();
 
-    const promise = auth.createUserWithEmailAndPassword(email,pass);
-    promise.catch(e => console.log(e.messsage)); 
-  });
 
-  btnLogout.addEventListener('click', e => {
-    firebase.auth().signOut();
-  });
-
-  firebase.auth().onAuthStateChanged(firebaseUser => {
-    if(firebaseUser) {
-      console.log(firebaseUser);
-    } else {
-      console.log("Not Logged In");
-    }
-  });
 
 
 }());
