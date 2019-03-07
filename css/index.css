@@ -178,5 +178,18 @@ body {
   margin-bottom: 10px;
 }
 
+.form-horizontal .form-control{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.form-horizontal .btn-CRUD{
+  margin-top: 20px;
+}
+#map {
+  width: 900x;
+  height: 400px;
+
+}
+
 
   

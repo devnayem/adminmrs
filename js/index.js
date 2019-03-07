@@ -30,21 +30,24 @@
 				firebase.auth().signOut();
       });
       
-
-
       
       var rootRef1 = firebase.database().ref().child("User");
 
       rootRef1.on("child_added", snap => {
-        var name = snap.child("Name").val();
-        var password = snap.child("Password").val();
+        var id = snap.child("id").val();
+        var name = snap.child("name").val();
+        var email = snap.child("email").val();
         var phone = snap.child("phone").val();
+        var pass = snap.child("password").val();
       
-        $("#table_users").append("<tr><td>"+ name +"</td><td>"+ password +"</td><td>"+ phone +"</td><td><button>Delete</button></td></tr>")
+        $("#tbl_users_list").append("<tr><td>"+ id +"</td><td>"+ name+"</td><td>"+ email +"</td><td>"+ phone +"</td><td>"+ pass +"</td></tr>")
         
       });
+      
 
-
+     
+      //-----------------------------------------------------------
+      
       var rootRef2 = firebase.database().ref().child("Tools");
 
       rootRef2.on("child_added", snap => {
@@ -52,8 +55,19 @@
         var tlName = snap.child("Name").val();
         var tlStock = snap.child("Stock").val();
 
-        $("#table_reports").append("<tr><td>"+ tlID +"</td><td>"+ tlName +"</td><td>"+ tlStock + "</td><td><button>Delete</button></td></tr>")
-        
+        $("#table_reports").append("<tr><td>"+ tlID +"</td><td>"+ tlName +"</td><td>"+ tlStock + "</td><td><button>Edit</button><button>Delete</button></td></tr>")
       });
-  
+
+      var rootRef3 = firebase.database().ref().child("Requests");
+
+      rootRef3.on("child_added", snap => {
+        var reqName = snap.child("name").val();
+        var reqPhone = snap.child("phone").val();
+        var reqTime = snap.child("date").val();
+      
+        $("#table_request").append("<tr><td>"+ reqName +"</td><td>"+ reqPhone +"</td><td>"+ reqTime +"</td></tr>")
+    
+      });
+      
+
   }());
